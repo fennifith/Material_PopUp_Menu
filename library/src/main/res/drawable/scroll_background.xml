@@ -3,4 +3,5 @@
     <padding
         android:left="4dp"
         android:right="4dp" />
+    <solid android:color="#BDBDBD" />
 </shape>

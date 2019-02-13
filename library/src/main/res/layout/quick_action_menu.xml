@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <FrameLayout
         android:id="@+id/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        tools:background="@drawable/qa_round_top">
 
         <com.gsd.mpm.materialpopupmenu.GoogleTextView
             android:id="@+id/menu_title"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_width="wrap_content"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="4dp"
             android:layout_gravity="center|start"
             android:layout_marginStart="16dp"
-            style="@style/Base.TextAppearance.AppCompat.Title"
-            android:text="Menu Title" />
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="16dp"
+            tools:text="Menu Title" />
 
     </FrameLayout>
 
@@ -35,16 +38,19 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_below="@id/header2"
+        android:layout_marginStart="8dp"
+        android:paddingStart="16dp"
         android:paddingEnd="2dp"
-        android:paddingStart="16dp">
+        tools:background="@drawable/scroll_background"
+        tools:layout_height="72dp">
 
         <LinearLayout
             android:id="@+id/tracks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:background="@drawable/track_background">
 
             <View
                 android:id="@+id/start_track"
@@ -55,35 +61,40 @@
                 android:id="@+id/end_track"
                 android:layout_width="4dp"
                 android:layout_height="match_parent" />
+
         </LinearLayout>
+
     </HorizontalScrollView>
 
     <FrameLayout
         android:id="@+id/footer"
-        android:layout_marginStart="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/scroll" >
+        android:layout_below="@id/scroll"
+        android:layout_marginStart="8dp"
+        tools:background="@drawable/qa_round_bottom">
 
         <com.gsd.mpm.materialpopupmenu.GoogleTextView
             android:id="@+id/menu_subTitle"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_width="wrap_content"
+            style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="4dp"
             android:layout_gravity="center|start"
             android:layout_marginStart="16dp"
-            style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
-            android:text="Bottom Text"/>
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingBottom="16dp"
+            tools:text="Bottom Text" />
+
     </FrameLayout>
 
     <ImageView
         android:id="@+id/arrow_down"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-11dp"
         android:layout_below="@id/footer"
+        android:layout_marginTop="-11dp"
         android:src="@drawable/down_arrow" />
 
 </RelativeLayout>
